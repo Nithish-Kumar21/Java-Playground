@@ -1,21 +1,18 @@
 import java.util.Scanner;
 
-public class Exercise12 {
-    public static void main(String[] args) {
+public class Exercise12{
+    public static void main(String args[]){
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Enter month : ");
-        String month = scan.nextLine();
+        System.out.print("Enter a number : ");
+        int num = scan.nextInt();
 
-        System.out.print("Enter date : ");
-        int date = scan.nextInt();
-
-        if(month.equals("february") && date == 21){
-            System.out.println("Happy Birthday Nithish!!");
-        }
-        else if(date != 21 || ! month.equals("february")){
-            System.out.println("Can't wait for your Birthday!");
+        if(num % 3 == 0 && num % 5 == 0){
+            System.out.println("The given number " + num + " is divisible by both 3 and 5.");
+        }else{
+            System.out.println("Sorry, The given number " + num + " is not divisible by both 3 and 5.");
         }
         scan.close();
+
     }
 }
